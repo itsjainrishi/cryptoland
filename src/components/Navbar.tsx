@@ -47,7 +47,7 @@ function Navbar() {
                 <Link to="market">Market</Link>
               </li>
               <li>
-                <a href="#news">News</a>
+                <span className="cursor-pointer">News</span>
               </li>
             </ul>
             <ul className="hidden lg:flex font-roboto gap-8 text-lg items-center ml-auto mr-4">
@@ -88,7 +88,7 @@ function Navbar() {
             <Link to="market">Market</Link>
           </li>
           <li className="p-2" onClick={openMobile}>
-            <a href="#news">News</a>
+            <span className="cursor-pointer">News</span>
           </li>
         </ul>
       </div>

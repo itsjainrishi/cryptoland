@@ -79,13 +79,13 @@ function Register() {
                   </button>
                   <p className="mt-6 text-xs text-secondary text-center">
                     I agree to abide by CryptoLand's&nbsp;
-                    <a href="#" className="border-b border-[#ececec] border-dotted">
+                    <span className="border-b border-[#ececec] border-dotted cursor-pointer">
                       Terms of Service
-                    </a>
+                    </span>
                     &nbsp;and its
-                    <a href="#" className="border-b border-[#ececec] border-dotted">
+                    <span className="border-b border-[#ececec] border-dotted cursor-pointer">
                       &nbsp;Privacy Policy
-                    </a>
+                    </span>
                   </p>
                 </div>
               </div>
