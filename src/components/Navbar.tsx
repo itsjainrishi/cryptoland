@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
+import { faBarsStaggered, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 
 function Navbar() {
@@ -34,15 +34,15 @@ function Navbar() {
 
   return (
     <>
-      <nav className={`hidden lg:block w-full top-0 z-50 ${sticky ? "fixed bg-white" : "absolute"}`}>
-        <div className="container mx-auto navbar-container">
-          <div className=" navbar flex py-6 justify-space-between">
+      <nav className={`w-full top-0 z-50 ${sticky ? "fixed bg-white" : "absolute"}`}>
+        <div className="container mx-auto navbar-container px-4 lg:px-0 lg:pl-4">
+          <div className="navbar flex py-4 lg:py-6 justify-between">
             <Link className="flex items-center" to="/">
-              <p className="font-bold text-xl xl:text-3xl text-primary" onClick={goTop}>
+              <p className="font-bold text-2xl xxl:text-3xl text-primary" onClick={goTop}>
                 CryptoLand
               </p>
             </Link>
-            <ul className="flex gap-12 font-roboto text-secondary text-lg xl:pl-40 items-center">
+            <ul className="hidden lg:flex gap-12 font-roboto text-secondary text-lg pl-20 xl:pl-40 items-center">
               <li>
                 <Link to="market">Market</Link>
               </li>
@@ -50,7 +50,7 @@ function Navbar() {
                 <a href="#news">News</a>
               </li>
             </ul>
-            <ul className="flex font-roboto gap-8 text-lg items-center ml-auto mr-4">
+            <ul className="hidden lg:flex font-roboto gap-8 text-lg items-center ml-auto mr-4">
               <li>
                 <button className={`rounded-xl px-4 py-3 ${sticky ? "bg-primary text-[#fafafa]" : location.pathname === "/" ? "bg-[#fafafa] text-primary" : "text-[#fafafa] bg-primary"}`}>
                   <Link to="register">Register</Link>
@@ -64,6 +64,7 @@ function Navbar() {
               <FontAwesomeIcon
                 className="hamburger-menu lg:hidden"
                 icon={faBarsStaggered}
+                size="xl"
                 onClick={openMobile}
               />
             </span>
@@ -72,16 +73,21 @@ function Navbar() {
       </nav>
 
       {/* mobile nav */}
-      <div className={`mobile-nav fixed h-screen w-full lg:hidden ${mobile ? "left-0" : ""}`}>
-        <i onClick={openMobile} className="fa-solid fa-xmark close-mobile"></i>
-        <ul>
-          <li onClick={openMobile}>
-            <a href="#market">Market</a>
+      <div className={`mobile-nav flex items-center justify-center fixed h-screen w-full lg:hidden transition ease-in-out delay-150 bg-[#f3f2f4] top-0 z-[60] ${mobile ? "left-0" : "-left-[100%]"}`}>
+        <FontAwesomeIcon
+          icon={faXmark}
+          size="2x"
+          style={{position: "absolute", top: "1rem", right: "1rem"}}
+          onClick={openMobile}
+        />
+        <ul className="text-2xl font-bold">
+          <li className="p-2" onClick={openMobile}>
+            <Link to="home">Home</Link>
           </li>
-          <li onClick={openMobile}>
-            <a href="#exchange">Exchange</a>
+          <li className="p-2" onClick={openMobile}>
+            <Link to="market">Market</Link>
           </li>
-          <li onClick={openMobile}>
+          <li className="p-2" onClick={openMobile}>
             <a href="#news">News</a>
           </li>
         </ul>

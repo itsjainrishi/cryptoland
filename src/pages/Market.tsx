@@ -41,7 +41,7 @@ function Market() {
 
   return(
     <>
-      <div className="container mx-auto mt-[100px] mb-10">
+      <div className="container mx-auto mt-[100px] mb-10 px-4">
         <section className="market-overview">
           <h1 className="text-3xl pt-8 font-bold">Market Overview</h1>
           <p className="font-roboto text-secondary text-sm mt-1">
@@ -50,7 +50,7 @@ function Market() {
         </section>
         <section className="coinlist mt-10">
           <div>
-            <div className="coin-list__header grid grid-cols-4 gap-8 p-4 font-roboto border-b border-[#ececec]">
+            <div className="coin-list__header grid grid-cols-[200px_100px_100px_150px] md:grid-cols-4 gap-8 p-4 font-roboto border-b border-[#ececec] w-fit md:w-full">
               <p>Name</p>
               <p>Price</p>
               <p>24h Change</p>
@@ -65,7 +65,7 @@ function Market() {
                 <Link
                   onClick={scrollTop}
                   to={`/coin/${item.id}`}
-                  className={`coin-row grid grid-cols-4 gap-8 p-4 font-roboto items-center ${ index % 2 === 1 ? "bg-[#ececec]" : ""}`}
+                  className={`coin-row grid grid-cols-[200px_100px_100px_150px] md:grid-cols-4 gap-8 p-4 font-roboto items-center w-fit md:w-full ${ index % 2 === 1 ? "bg-[#ececec]" : ""}`}
                   key={item.id}
                 >
                   <span className="flex gap-8 items-center">

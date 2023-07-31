@@ -116,3 +116,12 @@ html {
 .coin-description p a {
   color: #52a383;
 }
+
+.hide-scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll-x {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

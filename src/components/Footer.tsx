@@ -3,7 +3,7 @@ function Footer() {
     <>
       <section className="py-10 bg-primary sm:pt-16 lg:pt-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-16 gap-x-12">
             <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
               <h5 className="font-bold text-xl xl:text-3xl text-[#fcfbfe]">
                 CryptoLand
@@ -13,62 +13,22 @@ function Footer() {
                 Providing you with the most seamless process you can imagine for trading crypto.
               </p>
             </div>
-            <div className="lg:col-start-5">
-              <p className="text-sm font-roboto font-semibold tracking-widest text-[#fcfbfe] uppercase">
-                Company
-              </p>
-
-              <ul className="mt-6 space-y-4 font-roboto">
-                <li>
-                  <a href="#" className="flex text-base text-secondary">
-                    About
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="flex text-base text-secondary">
-                    Careers
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="flex text-base text-secondary">
-                    Privacy
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="flex text-base text-secondary">
-                    Terms
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="lg:col-start-6">
-              <p className="text-sm font-roboto font-semibold tracking-widest text-[#fcfbfe] uppercase">
-                Help
-              </p>
-
-              <ul className="mt-6 space-y-4 font-roboto">
-                <li>
-                  <a href="#" className="flex text-base text-secondary">
-                    Chat Support
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="flex text-base text-secondary">
-                    Support Center
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="flex text-base text-secondary">
-                    Trading Rules
-                  </a>
-                </li>
-              </ul>
+            
+            <div className="md:col-span-1 lg:col-start-5 lg:col-span-2">
+              <div className="socials flex justify-end">
+                <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+                  <img className="h-6 mr-6" src="/instagram.svg" alt="Instagram" />
+                </a>
+                <a href="https://www.discord.com" target="_blank" rel="noreferrer">
+                  <img className="h-6 mr-6" src="/discord.svg" alt="Discord" />
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                  <img className="h-6 mr-6" src="/facebook.svg" alt="Facebook" />
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+                  <img className="h-6 mr-6" src="/youtube.svg" alt="Youtube" />
+                </a>
+              </div>
             </div>
 
           </div>
