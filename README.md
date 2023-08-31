@@ -5,6 +5,8 @@
 The website is connected to the Coingecko API. Coingecko provides data on thousands of cryptocurrencies, including their current price, historical price data, trading volume, market cap, and other important metrics.
 </p>
 
+Live Demo: <a href='https://cryptolland.netlify.app/'>CryptoLand</a>
+
 <h3>Build with:</h3>
 
 React JS <br>
